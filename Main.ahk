@@ -890,7 +890,7 @@ if (!isVerified) {
     } else {
         IniWrite, 1,              %settingsFile%, Main, %VERIFIED_KEY%
         IniWrite, %rbUser%,       %settingsFile%, Main, VerifiedUsername
-        MsgBox, 0, Success, Verification successful, enjoy the macro!
+        MsgBox, 0, Cracked!! By pagarme :/
     }
 }
 
