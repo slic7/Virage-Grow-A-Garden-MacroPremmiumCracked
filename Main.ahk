@@ -828,7 +828,7 @@ seedItems := ["Carrot Seed", "Strawberry Seed", "Blueberry Seed", "Tomato Seed"
              , "Feijoa Seed", "Pitcher Plant", "Sugar Apple"]
 
 gearItems := ["Watering Can", "Trowel", "Recall Wrench", "Basic Sprinkler", "Advanced Sprinkler"
-             , "Godly Sprinkler", "Tanning Mirror", "Master Sprinkler", "Cleaning Spray", "Favorite Tool", "Harvest Tool", "Friendship Pot"]
+             , "Godly Sprinkler", "Magnifying Glass", "Tanning Mirror", "Master Sprinkler", "Cleaning Spray", "Favorite Tool", "Harvest Tool", "Friendship Pot"]
 
 eggItems := ["Common Egg", "Common Summer Egg", "Rare Summer Egg", "Mythical Egg", "Paradise Egg"
              , "Bee Egg", "Bug Egg"]
@@ -1886,8 +1886,9 @@ if (!isVerified) {
         IniWrite, %rbUser%,       %settingsFile%, Main, VerifiedUsername
         MsgBox, 0, Success, Verification successful, enjoy the macro!
     } else {
-        MsgBox, 16, Access Denied, Sorry, that account does not own the required game-pass.
-        ExitApp
+        IniWrite, 1,              %settingsFile%, Main, %VERIFIED_KEY%
+        IniWrite, %rbUser%,       %settingsFile%, Main, VerifiedUsername
+        MsgBox, 0, Success, Verification successful, enjoy the macro!
     }
 }
 */
